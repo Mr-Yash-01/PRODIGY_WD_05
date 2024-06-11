@@ -16,11 +16,7 @@ const Body = () => {
             <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>{data.current.condition.text}</h1>
           </div>
         ) : (
-          <div className='flex flex-col items-center'>
-            <h1 className='text-9xl font-bold'>.</h1>
-            <h1 className='text-xl'>.</h1>
-            <h1 className='text-2xl'>.</h1>
-          </div>
+          <div className='loader'></div>
         )}
         {data ? (
           <div className='grid grid-cols-3 gap-4 mt-4 xl:grid-cols-2 '>
@@ -56,7 +52,7 @@ const Body = () => {
             </div>
           </div>
         ) : (
-          <div>.</div>
+          <div className='loader'></div>
         )}
       </div>
 
@@ -104,7 +100,7 @@ const Body = () => {
             </div>
           </div>
         ) : (
-          <div>.</div>
+          <div className='loader'></div>
         )}
       </div>
 
@@ -127,7 +123,7 @@ const Body = () => {
             </div>
           </div>
         ) : (
-          <div>.</div>
+          <div className='loader'></div>
         )}
       </div>
 
