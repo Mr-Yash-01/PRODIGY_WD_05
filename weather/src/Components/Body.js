@@ -7,11 +7,11 @@ const Body = () => {
 
   return (
     <div className='flex flex-col'>
-      <div className='flex flex-col mt-8 md:flex-row md:gap-10 lg:gap-16 xl:justify-evenly xl:items-center'>
+      <div className='flex flex-col mt-8 items-center md:flex-row md:gap-10 lg:gap-16 xl:justify-evenly xl:items-center'>
         {data ? (
-          <div className='flex flex-col items-center'>
+          <div className='flex flex-col items-center gap-2'>
             <h1 className='text-9xl font-bold md:text-'>{data.current.temp_c}°</h1>
-            <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl'>{data.current.condition.text} {data.forecast.forecastday[0].day.mintemp_c}°/ {data.forecast.forecastday[0].day.maxtemp_c}°
+            <h1 className='text-xl md:text-2xl lg:text-3xl xl:text-4xl'>{data.forecast.forecastday[0].day.mintemp_c}°/ {data.forecast.forecastday[0].day.maxtemp_c}°
               Humidity: {data.current.humidity}</h1>
             <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>{data.current.condition.text}</h1>
           </div>
@@ -62,16 +62,11 @@ const Body = () => {
 
       <div className='flex flex-col mt-8 md:mt-16 lg:mt-16 xl:mt-24 '>
         {data ? (
-          <div className='flex flex-col gap-2 md:flex-row-reverse md:items-center md:gap-10 lg:flex-row-reverse lg:items-center lg:gap-16 xl:flex-row-reverse xl:items-center xl:gap-32'>
-            <h1 className='flex gap-1 text-3xl md:text-5xl md:min-w-fit lg:text-7xl lg:min-w-fit xl:text-7xl xl:min-w-fit'>
-              <span className='font-medium'>
-                {data.location.region} ,
-              </span>
-              <span className='font-bold'>
-                {data.location.country}
-              </span>
+          <div className='flex flex-col gap-6 text-center  md:items-center   lg:items-center  xl:flex-row-reverse  xl:justify-evenly '>
+            <h1 className='flex gap-1 text-3xl font-medium md:text-5xl  lg:text-7xl  xl:text-7xl'>
+                {data.location.region}, {data.location.country}
             </h1>
-            <div className='flex flex-col gap-2 md:w-full lg:w-full xl:w-full'>
+            <div className='flex flex-col gap-2 md:w-full lg:w-full xl:w-full 2xl:w-1/2'>
               <div className='flex flex-row gap-3 bg-slate-800 rounded-xl px-4 py-2 items-center'>
                 <div className='flex flex-col min-w-max items-center md:text-xl'>
                   <img alt='logo' className='h-16 w-16 md:w-28 md:h-28' src='https://img.icons8.com/?size=100&id=15374&format=png&color=000000'></img>
